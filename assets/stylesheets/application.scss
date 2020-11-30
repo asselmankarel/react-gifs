@@ -3,8 +3,15 @@ body {
 }
 
 #root {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+}
+
+.left-panel {
+  width: 60%;
+  background-color: whitesmoke;
+}
+
+.right-panel {
+  width: 40%;
+  background-color: lightgray;
 }

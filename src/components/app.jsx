@@ -9,7 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>Welcome</h1>
+        <div className="left-panel" />
+        <div className="right-panel" />
       </div>
     );
   }
