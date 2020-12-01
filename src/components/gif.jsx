@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Gif extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { url: 'https://media2.giphy.com/media/BBkKEBJkmFbTG/200.gif' };
-  }
-
+class Gif extends PureComponent {
   render() {
-    const { url } = this.state;
+    const { id } = this.props;
+    if (!id) { return null; }
+    const src = `https://media2.giphy.com/media/${id}/200.gif`;
     return (
-      <img className="gif" alt="selected gif" src={url} />
+      <img className="gif" alt="selected gif" src={src} />
     );
   }
 }
