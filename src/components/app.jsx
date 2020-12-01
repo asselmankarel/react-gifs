@@ -13,7 +13,7 @@ class App extends Component {
         { id: 'BBkKEBJkmFbTG' },
         { id: 'Ymbd9FFkGz1lYurgeZ' }
       ],
-      selectedGifId: 'BBkKEBJkmFbTG'
+      selectedGifId: null
     };
   }
 
@@ -24,6 +24,12 @@ class App extends Component {
       rating: 'g'
     }, (error, result) => {
       this.setState({ gifs: result.data });
+    });
+  }
+
+  selectGif = (id) => {
+    this.setState({
+      selectedGifId: id
     });
   }
 
@@ -38,7 +44,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={gifs} />
+          <GifList gifs={gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
